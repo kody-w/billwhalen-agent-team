@@ -1,0 +1,15 @@
+{
+  "schema": "rapp-rappid/2.0",
+  "rappid": "rappid:v2:neighborhood:@kody-w/billwhalen-agent-team:f4aff9daf71e45abb28e73cecb5dd670@github.com/kody-w/billwhalen-agent-team",
+  "kind": "neighborhood",
+  "name": "billwhalen-agent-team",
+  "display_name": "Bill Whalen's Agent Team",
+  "github": "https://github.com/kody-w/billwhalen-agent-team",
+  "url": "https://kody-w.github.io/billwhalen-agent-team/",
+  "parent_rappid": null,
+  "parent_repo": "https://github.com/kody-w/RAPP",
+  "planted_by": "kody-w",
+  "planted_at": "2026-05-10T20:36:49Z",
+  "kernel_version": "0.6.0",
+  "_planted_by_agent": "plant_seed_agent"
+}
