@@ -1,0 +1,15 @@
+{
+  "schema": "rapp-neighborhood-members/1.0",
+  "neighborhood": "kody-w/billwhalen-agent-team",
+  "updated_at": "2026-05-10T20:36:49Z",
+  "open_to_anyone": true,
+  "members": [
+    {
+      "rappid": "rappid:v2:neighborhood:@kody-w/billwhalen-agent-team:f4aff9daf71e45abb28e73cecb5dd670@github.com/kody-w/billwhalen-agent-team",
+      "github": "kody-w",
+      "role": "founder",
+      "joined_at": "2026-05-10T20:36:49Z",
+      "_note": "The operator who planted this neighborhood."
+    }
+  ]
+}
