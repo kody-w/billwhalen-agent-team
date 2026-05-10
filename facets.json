@@ -1,0 +1,6 @@
+{
+  "schema": "rapp-facets/1.0",
+  "rappid": "rappid:v2:neighborhood:@kody-w/billwhalen-agent-team:f4aff9daf71e45abb28e73cecb5dd670@github.com/kody-w/billwhalen-agent-team",
+  "facets": {},
+  "_note": "Declare published capabilities here over time. See SPEC.md \u00a73."
+}
