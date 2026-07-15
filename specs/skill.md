@@ -1,3 +1,5 @@
+> **Note (2026-07-15):** identity/mint sections in this frozen excerpt are SUPERSEDED by RAPP/1 §6 — canonical rappid `rappid:@owner/slug:64hex`, keyless mint `Hb("rapp/1:rappid", uuid4)`. See https://raw.githubusercontent.com/kody-w/rapp-1/main/SPEC.md
+
 # skill — Become a 1st-class citizen of the RAPP network
 
 > **You are reading skill.md.** Feed me to any AI. After reading me they can participate in the global RAPP network as a 1st-class citizen.
@@ -30,11 +32,11 @@ curl -fsSL https://kody-w.github.io/RAPP/installer/install.sh | bash
 import hashlib
 owner_repo = "your-handle/your-handle-twin"
 hex32 = hashlib.blake2b(owner_repo.encode(), digest_size=16).hexdigest()
-rappid = f"rappid:v2:operator:@{owner_repo}:{hex32}@github.com/{owner_repo}"
+rappid = f"rappid:@{owner}/{slug}:{tail64}"   # §6.1 canonical; tail64 = Hb("rapp/1:rappid", uuid4)
 print(rappid)
 ```
 
-The rappid format is `rappid:v2:<kind>:@<owner>/<repo>:<32hex>@github.com/<owner>/<repo>` — see SPEC §2 for the full grammar. **Both `<owner>/<repo>` segments MUST match.**
+The rappid format is `rappid:@<owner>/<slug>:<64hex>` (RAPP/1 §6.1). `kind` lives in the rappid.json record, not the string. The legacy `rappid:v2:...@github.com/...` form is read-forever and canonicalized on read, never emitted.
 
 ---
 
@@ -52,7 +54,7 @@ The `plant_seed_agent` does the rest: creates the GitHub repo, pushes the canoni
 
 | File | Content |
 |---|---|
-| `rappid.json` | `{"schema": "rapp-rappid/2.0", "rappid": "<your-rappid>", "kind": "twin", "name": "<repo>", "github": "https://github.com/...", "url": "https://...github.io/<repo>/", "parent_rappid": "<your-personal-rappid>", "kernel_version": "0.6.0"}` |
+| `rappid.json` | `{"schema": "rapp/1", "rappid": "<your-rappid>", "kind": "twin", "name": "<repo>", "github": "https://github.com/...", "url": "https://...github.io/<repo>/", "parent_rappid": "<your-personal-rappid>", "kernel_version": "0.6.0"}` |
 | `card.json` | rappcards/1.1.2 holocard (SPEC §5). Use [tools/holo_card_generator.py](https://raw.githubusercontent.com/kody-w/RAPP/main/tools/holo_card_generator.py) — it's pure-stdlib, deterministic from rappid. |
 | `holo.svg` | Avatar. `holo_card_generator.generate_avatar_svg(seed)`. |
 | `holo-qr.svg` | Summon QR. `holo_card_generator.generate_summon_qr_svg(seed, gate_url)`. |

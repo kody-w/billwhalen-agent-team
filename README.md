@@ -62,7 +62,7 @@ Bill Whalen and his team build with [`agent-team-starter-kit`](https://github.co
 
 ## Identity
 
-- **Rappid:** `rappid:v2:neighborhood:@kody-w/billwhalen-agent-team:f4aff9daf71e45abb28e73cecb5dd670@github.com/kody-w/billwhalen-agent-team`
+- **Rappid:** `rappid:@kody-w/billwhalen-agent-team:83942d3a707bb8b39cdaff36aa6c258d6e2abd7aaf58b74d725b6c5dacbc0227`
 - **Kind:** `neighborhood`
 - **Planted at:** 2026-05-10T20:36:49Z
 - **Parent:** [kody-w/RAPP](https://github.com/kody-w/RAPP)

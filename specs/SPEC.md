@@ -1,3 +1,5 @@
+> **Note (2026-07-15):** identity/mint sections in this frozen excerpt are SUPERSEDED by RAPP/1 §6 — canonical rappid `rappid:@owner/slug:64hex`, keyless mint `Hb("rapp/1:rappid", uuid4)`. See https://raw.githubusercontent.com/kody-w/rapp-1/main/SPEC.md
+
 # RAPP Protocol — The Network Spec
 
 > One file. Read this and you can participate in the global RAPP network. The only requirement is a GitHub account.
@@ -51,7 +53,7 @@ Adding a new kind requires a CONSTITUTION amendment because every consumer deriv
 
 ### §2.3 Hex derivation (recommended)
 
-`hex = BLAKE2b(f"{owner}/{repo}", digest_size=16).hexdigest()` — deterministic from owner+repo. Or `uuid.uuid4().hex` — random. Either is valid; deterministic is preferred so the same `(owner, repo)` always yields the same rappid and rappids can be regenerated without storage.
+The 64-hex tail is `Hb("rapp/1:rappid", uuid4_bytes)` = `sha256(b"rapp/1:rappid\n" + uuid4.bytes)` — a KEYLESS, domain-separated mint (RAPP/1 §6.2), minted ONCE and reused. NEVER `BLAKE2b/sha256(owner/repo)` (name-hashing an address is the cardinal sin) and NEVER a 32-hex `uuid4().hex` (§6.1 requires 64 hex).
 
 ### §2.4 Reissue, never "patch"
 

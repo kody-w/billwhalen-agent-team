@@ -52,7 +52,7 @@
     "quality_tier": "community",
     "license": "PolyForm-Small-Business",
     "kind": "neighborhood",
-    "rappid": "rappid:v2:neighborhood:@kody-w/billwhalen-agent-team:f4aff9daf71e45abb28e73cecb5dd670@github.com/kody-w/billwhalen-agent-team",
+    "rappid": "rappid:@kody-w/billwhalen-agent-team:83942d3a707bb8b39cdaff36aa6c258d6e2abd7aaf58b74d725b6c5dacbc0227",
     "gate_url": "https://kody-w.github.io/billwhalen-agent-team/",
     "summon_url": "https://kody-w.github.io/RAPPcards/#summon&seed=13174168395855815085",
     "_compliance": "rappcards/1.1.2 \u2014 kody-w/RAPPcards/SPEC.md"
